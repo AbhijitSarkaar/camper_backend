@@ -2,7 +2,11 @@
 //@route GET /ap1/v1/bootcamps
 //@access Public
 const getBootcamps = (req, res, next) => {
-    res.status(200).json({ success: true, msg: 'display all bootcamps' });
+    res.status(200).json({
+        success: true,
+        msg: 'display all bootcamps',
+        hello: req.hello,
+    });
 };
 
 //@desc Get single bootcamp
