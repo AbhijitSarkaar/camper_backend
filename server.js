@@ -9,6 +9,9 @@ connectDB();
 
 const app = express();
 
+//request body parse
+app.use(express.json());
+
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
